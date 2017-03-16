@@ -18,11 +18,16 @@ public class GuiAgenda {
  * @param args the command line arguments
  */
 
-public static ArrayList<NuevoContacto> contactos=new ArrayList<>();
+public static ArrayList<Contacto> contactos=new ArrayList<>();
 
-public static void añadirDatos(String nombre, String telefono, String email){
+    public static ArrayList<Contacto> getContactos() {
+        return contactos;
+    }
 
-NuevoContacto c=new NuevoContacto(nombre,telefono,email);	
+
+
+public static void añadirDatos(Contacto c){
+	
 contactos.add(c);
 
 }
