@@ -5,24 +5,27 @@
  */
 package pkg05.gui.agenda;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 /**
  *
  * @author m
  */
-public class GuiAgenda {
+public class DatosAgenda {
 
-/**
- * @param args the command line arguments
- */
+private static ArrayList<Contacto> contactos=new ArrayList<>();
+
+    public static ArrayList<Contacto> getContactos() {
+        return contactos;
+    }
 
 
-public static void main(String[] args) {
+
+public static void añadirContacto(Contacto c){
 	
-	MenuPrincipal m=new MenuPrincipal();
-	m.setVisible(true);
-}
+contactos.add(c);
 
+
+}
+	
 }

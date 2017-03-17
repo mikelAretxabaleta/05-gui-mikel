@@ -14,12 +14,32 @@ import javax.swing.*;
  */
 public class MenuPrincipal extends javax.swing.JFrame {
 
-    boolean nc=false;
-    boolean ag=false;
+    
+    private static Agenda a=new Agenda();
+    private static NuevoContacto nc=new NuevoContacto();
+    private static Buscar b=new Buscar();
+
+	public static Agenda getA() {
+		return a;
+	}
+
+	public static NuevoContacto getNc() {
+		return nc;
+	}
+
+	public static Buscar getB() {
+		return b;
+	}
+    
+    
 /**
  * Creates new form MenuPrincipal
  */
 public MenuPrincipal() {
+	
+	nc.setMenuPrincipal(this);
+	a.setMenuPrincipal(this);
+	b.setMenuPrincipal(this);
 	initComponents();
 	
 	
@@ -80,22 +100,27 @@ public MenuPrincipal() {
 
         private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
        
-            if(nc==false){    
-            NuevoContacto c=new NuevoContacto();
-		c.setVisible(true);}
-            nc=true;
+          
+            if(!nc.isVisible()){    
+            nc.setVisible(true);}
+            
         }//GEN-LAST:event_jLabel1MouseClicked
 
+	
+	
         private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-            if(ag==false){    
-            Agenda a =new Agenda();
-                a.setVisible(true);}
-            ag=true;
+            
+		if(!a.isVisible()){    
+            a.setVisible(true);}
+	    
+		
+           
                 
         }//GEN-LAST:event_jLabel2MouseClicked
 
         private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-                // TODO add your handling code here:
+                if(!b.isVisible()){    
+            b.setVisible(true);}
         }//GEN-LAST:event_jLabel3MouseClicked
 
 /**

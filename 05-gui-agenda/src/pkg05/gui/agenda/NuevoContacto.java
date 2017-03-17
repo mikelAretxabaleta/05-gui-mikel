@@ -12,8 +12,13 @@ package pkg05.gui.agenda;
 public class NuevoContacto extends javax.swing.JFrame {
 
 
+private MenuPrincipal menuPrincipal;
 
-	
+	public void setMenuPrincipal(MenuPrincipal menuPrincipal) {
+		this.menuPrincipal = menuPrincipal;
+	}
+
+
 
 
 
@@ -139,7 +144,8 @@ public NuevoContacto() {
             c.setNombre(jTextField1.getText());
 		c.setTelefono(jTextField2.getText());
 		c.setEmail(jTextField3.getText());
-		GuiAgenda.añadirDatos(c);
+		DatosAgenda.añadirContacto(c);
+		MenuPrincipal.getA().verAgenda();
 		
         }//GEN-LAST:event_jButton1ActionPerformed
 
