@@ -14,15 +14,25 @@ import java.util.ArrayList;
  */
 public class GuiAgenda {
 
+
+private static MenuPrincipal m=new MenuPrincipal();
+
+	public static MenuPrincipal getM() {
+		return m;
+	}
+	
+
+	
+	
 /**
  * @param args the command line arguments
  */
 
-
 public static void main(String[] args) {
 	
-	MenuPrincipal m=new MenuPrincipal();
 	m.setVisible(true);
+
+	
 }
 
 }

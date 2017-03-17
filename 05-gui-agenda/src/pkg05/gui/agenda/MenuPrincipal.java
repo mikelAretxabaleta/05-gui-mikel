@@ -15,19 +15,19 @@ import javax.swing.*;
 public class MenuPrincipal extends javax.swing.JFrame {
 
     
-    private static Agenda a=new Agenda();
-    private static NuevoContacto nc=new NuevoContacto();
-    private static Buscar b=new Buscar();
+    private Agenda a=new Agenda();
+    private  NuevoContacto nc=new NuevoContacto();
+    private Buscar b=new Buscar();
 
-	public static Agenda getA() {
+	public  Agenda getA() {
 		return a;
 	}
 
-	public static NuevoContacto getNc() {
+	public  NuevoContacto getNc() {
 		return nc;
 	}
 
-	public static Buscar getB() {
+	public  Buscar getB() {
 		return b;
 	}
     

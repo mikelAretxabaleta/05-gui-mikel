@@ -145,7 +145,7 @@ public NuevoContacto() {
 		c.setTelefono(jTextField2.getText());
 		c.setEmail(jTextField3.getText());
 		DatosAgenda.añadirContacto(c);
-		MenuPrincipal.getA().verAgenda();
+		GuiAgenda.getM().getA().verAgenda();
 		
         }//GEN-LAST:event_jButton1ActionPerformed
 
