@@ -199,6 +199,34 @@ public Buscar() {
 
         private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
                 
+		String buscar=	jTextField1.getText();
+		if (jComboBox1.getModel().getSelectedItem()==jComboBox1.getModel().getElementAt(0)){
+		 for(int i=0;i<DatosAgenda.getContactos().size();i++){
+		  if (DatosAgenda.getContactos().get(i).getNombre().equalsIgnoreCase(buscar)){
+		   jTextField2.setText(DatosAgenda.getContactos().get(i).getNombre());
+		   jTextField3.setText(DatosAgenda.getContactos().get(i).getTelefono());
+		   jTextField4.setText(DatosAgenda.getContactos().get(i).getEmail());
+		  }
+		 }
+		}
+		if (jComboBox1.getModel().getSelectedItem().equals(jComboBox1.getModel().getElementAt(1))){
+		 for(int i=0;i<DatosAgenda.getContactos().size();i++){
+		  if (DatosAgenda.getContactos().get(i).getTelefono().equalsIgnoreCase(buscar)){
+		   jTextField2.setText(DatosAgenda.getContactos().get(i).getNombre());
+		   jTextField3.setText(DatosAgenda.getContactos().get(i).getTelefono());
+		   jTextField4.setText(DatosAgenda.getContactos().get(i).getEmail());
+		  }
+		 }
+		}
+		if (jComboBox1.getModel().getSelectedItem().equals(jComboBox1.getModel().getElementAt(2))){
+		 for(int i=0;i<DatosAgenda.getContactos().size();i++){
+		  if (DatosAgenda.getContactos().get(i).getEmail().equalsIgnoreCase(buscar)){
+		   jTextField2.setText(DatosAgenda.getContactos().get(i).getNombre());
+		   jTextField3.setText(DatosAgenda.getContactos().get(i).getTelefono());
+		   jTextField4.setText(DatosAgenda.getContactos().get(i).getEmail());
+		  }
+		 }
+		}
         }//GEN-LAST:event_jButton1ActionPerformed
 
         private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
