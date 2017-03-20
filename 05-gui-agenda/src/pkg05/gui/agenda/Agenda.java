@@ -5,11 +5,22 @@
  */
 package pkg05.gui.agenda;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author m
  */
 public class Agenda extends javax.swing.JFrame {
+
+
+
+private MenuPrincipal menuPrincipal;
+
+	public void setMenuPrincipal(MenuPrincipal menuPrincipal) {
+		this.menuPrincipal = menuPrincipal;
+	}
+
 
     int contador=1;
 /**
@@ -17,16 +28,19 @@ public class Agenda extends javax.swing.JFrame {
  */
 public Agenda() {
 	initComponents();
-        
-        jTextArea1.setText("\n"+"  Nombre: "+GuiAgenda.getContactos().get(contador-1).getNombre()+"\n"+"\n"
-                +"  Teléfono: "+GuiAgenda.getContactos().get(contador-1).getTelefono()+"\n"+"\n"
-                +"  Email: "+GuiAgenda.getContactos().get(contador-1).getEmail()+"\n"+"\n");
+        verAgenda();
+	}
+public void verAgenda(){
+	if (DatosAgenda.getContactos().size()>0){
+        jTextArea1.setText("\n"+"  Nombre: "+DatosAgenda.getContactos().get(contador-1).getNombre()+"\n"+"\n"
+                +"  Teléfono: "+DatosAgenda.getContactos().get(contador-1).getTelefono()+"\n"+"\n"
+                +"  Email: "+DatosAgenda.getContactos().get(contador-1).getEmail()+"\n"+"\n");
        
         
-            jTextField1.setText("\n"+" "+(contador)+" de "+GuiAgenda.getContactos().size());
+            jTextField1.setText("\n"+" "+(contador)+" de "+DatosAgenda.getContactos().size());
         
         
-}
+}}
 
 /**
  * This method is called from within the constructor to initialize the form.
@@ -85,23 +99,23 @@ public Agenda() {
         
         if (contador>1){
             contador--;
-        jTextArea1.setText("\n"+"  Nombre: "+GuiAgenda.getContactos().get(contador-1).getNombre()+"\n"+"\n"
-                +"  Teléfono: "+GuiAgenda.getContactos().get(contador-1).getTelefono()+"\n"+"\n"
-                +"  Email: "+GuiAgenda.getContactos().get(contador-1).getEmail()+"\n"+"\n");
+        jTextArea1.setText("\n"+"  Nombre: "+DatosAgenda.getContactos().get(contador-1).getNombre()+"\n"+"\n"
+                +"  Teléfono: "+DatosAgenda.getContactos().get(contador-1).getTelefono()+"\n"+"\n"
+                +"  Email: "+DatosAgenda.getContactos().get(contador-1).getEmail()+"\n"+"\n");
         
-        jTextField1.setText("\n"+" "+(contador)+" de "+GuiAgenda.getContactos().size());
+        jTextField1.setText("\n"+" "+(contador)+" de "+DatosAgenda.getContactos().size());
         }
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
          
-        if(contador<GuiAgenda.getContactos().size()){
+        if(contador<DatosAgenda.getContactos().size()){
             contador++;
-        jTextArea1.setText("\n"+"  Nombre: "+GuiAgenda.getContactos().get(contador-1).getNombre()+"\n"+"\n"
-                +"  Teléfono: "+GuiAgenda.getContactos().get(contador-1).getTelefono()+"\n"+"\n"
-                +"  Email: "+GuiAgenda.getContactos().get(contador-1).getEmail()+"\n"+"\n");
+        jTextArea1.setText("\n"+"  Nombre: "+DatosAgenda.getContactos().get(contador-1).getNombre()+"\n"+"\n"
+                +"  Teléfono: "+DatosAgenda.getContactos().get(contador-1).getTelefono()+"\n"+"\n"
+                +"  Email: "+DatosAgenda.getContactos().get(contador-1).getEmail()+"\n"+"\n");
         
-        jTextField1.setText("\n"+" "+(contador)+" de "+GuiAgenda.getContactos().size());}
+        jTextField1.setText("\n"+" "+(contador)+" de "+DatosAgenda.getContactos().size());}
     }//GEN-LAST:event_jLabel2MouseClicked
 
 /**
