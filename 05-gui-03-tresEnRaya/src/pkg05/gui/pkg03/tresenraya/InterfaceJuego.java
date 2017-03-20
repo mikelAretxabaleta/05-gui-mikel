@@ -324,7 +324,6 @@ public InterfaceJuego() {
 	g.setColor(Color.white);	
 	if (turno==0 && click1==false){
 	g.drawOval(75, 75, 150, 150);
-        g.fi
         array[0][0]=0;
 	if (Gui03TresEnRaya.hayGanador(array)){Gui03TresEnRaya.ganaO();}
 	turno++;
