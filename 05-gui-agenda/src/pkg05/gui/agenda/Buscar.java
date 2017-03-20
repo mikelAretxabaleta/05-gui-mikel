@@ -200,7 +200,7 @@ public Buscar() {
         private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
                 
 		String buscar=	jTextField1.getText();
-		if (jComboBox1.getModel().getSelectedItem()==jComboBox1.getModel().getElementAt(0)){
+		if (jComboBox1.getModel().getSelectedItem().equals(jComboBox1.getModel().getElementAt(0))){
 		 for(int i=0;i<DatosAgenda.getContactos().size();i++){
 		  if (DatosAgenda.getContactos().get(i).getNombre().equalsIgnoreCase(buscar)){
 		   jTextField2.setText(DatosAgenda.getContactos().get(i).getNombre());
